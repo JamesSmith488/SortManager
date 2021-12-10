@@ -15,6 +15,7 @@ public class Initaliser {
 
         System.out.println("Select a sorting algorithm");
         System.out.println("(1) Bubble Sort");
+        System.out.println("(2) Merge Sort");
 
         int sorter = scanner.nextInt();
 
@@ -31,6 +32,8 @@ public class Initaliser {
         //The sort algorithm to be used
         if (sorter == 1){
             System.out.println("Bubble Sort");
+        }else if (sorter == 2){
+            System.out.println("Merge Sort");
         }
 
         Long startTime = System.currentTimeMillis();
