@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Printer {
 
     public static void printArr(int[] arr){
-        System.out.print(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
     }
 
 }
