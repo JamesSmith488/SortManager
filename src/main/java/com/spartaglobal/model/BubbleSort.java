@@ -1,8 +1,8 @@
 package com.spartaglobal.model;
 
-public class BubbleSort {
+public class BubbleSort implements Sortable{
 
-    public static int[] sort(int[] arr) {
+    public int[] sort(int[] arr) {
         int[] sortedArr = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
             sortedArr[i] = arr[i];
