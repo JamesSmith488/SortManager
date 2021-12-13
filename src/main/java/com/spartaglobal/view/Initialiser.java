@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Initaliser {
+public class Initialiser {
 
     public static void start(){
         Scanner scanner = new Scanner(System.in);
@@ -21,6 +21,10 @@ public class Initaliser {
 
         System.out.println("Enter the length of the array");
         int arrLength = scanner.nextInt();
+        if (arrLength < 0){
+            System.out.println("Invalid length. Defaulting to 10");
+            arrLength = 10;
+        }
         int[] arr = new int[arrLength];
 
         for (int i = 0; i < arrLength; i++) {
@@ -34,6 +38,9 @@ public class Initaliser {
             System.out.println("Bubble Sort");
         }else if (sorter == 2){
             System.out.println("Merge Sort");
+        }else {
+            System.out.println("Invalid input. Defaulting to Bubble sort");
+            sorter = 1;
         }
 
         Long startTime = System.currentTimeMillis();
