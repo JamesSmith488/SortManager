@@ -16,6 +16,7 @@ public class Initialiser {
         System.out.println("Select a sorting algorithm");
         System.out.println("(1) Bubble Sort");
         System.out.println("(2) Merge Sort");
+        System.out.println("(3) Binary Tree Sort");
 
         int sorter = scanner.nextInt();
 
@@ -24,6 +25,8 @@ public class Initialiser {
         if (arrLength < 0){
             System.out.println("Invalid length. Defaulting to 10");
             arrLength = 10;
+        }else if (arrLength > 1000){
+            System.out.println("Length too high. Defaulting to 100");
         }
         int[] arr = new int[arrLength];
 
@@ -38,6 +41,8 @@ public class Initialiser {
             System.out.println("Bubble Sort");
         }else if (sorter == 2){
             System.out.println("Merge Sort");
+        }else if (sorter == 3){
+            System.out.println("Binary Tree Sort");
         }else {
             System.out.println("Invalid input. Defaulting to Bubble sort");
             sorter = 1;
