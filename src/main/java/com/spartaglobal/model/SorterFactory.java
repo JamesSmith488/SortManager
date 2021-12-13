@@ -7,6 +7,8 @@ public class SorterFactory {
             return new BubbleSort();
         } else if (sorter == 2){
             return new MergeSort();
+        } else if (sorter == 3){
+            return new BinaryTreeSort();
         }
         return null;
     }
