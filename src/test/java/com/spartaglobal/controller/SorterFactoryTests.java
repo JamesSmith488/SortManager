@@ -1,6 +1,7 @@
-package com.spartaglobal.model;
+package com.spartaglobal.controller;
 
-import com.spartaglobal.controller.SorterFactory;
+import com.spartaglobal.model.BubbleSort;
+import com.spartaglobal.model.MergeSort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
