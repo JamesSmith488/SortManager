@@ -1,9 +1,13 @@
 package com.spartaglobal.model;
 
+import com.spartaglobal.controller.Printer;
+import java.util.logging.Level;
+
 public class MergeSort implements Sortable{
 
     @Override
     public int[] sort(int[] arr) {
+        Printer.getLogger().log(Level.INFO,"Entering MergeSort.sort");
         return mergeSort(arr,arr.length);
     }
 

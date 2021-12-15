@@ -3,14 +3,36 @@ package com.spartaglobal.controller;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.logging.*;
+import java.io.IOException;
 
 public class Printer {
 
+    private final static Logger logger = Logger.getLogger("sortLogger");
+
+    public static Logger getLogger(){
+        return logger;
+    }
+
+    public static void loggerInit(){
+        try {
+            Handler fileHandler = new FileHandler("src/main/java/com/spartaglobal/view/sortLogger.log");
+            logger.addHandler(fileHandler);
+            logger.setUseParentHandlers(false);
+            fileHandler.setFormatter(new SimpleFormatter());
+        } catch (
+                IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void printArr(int[] arr){
+        logger.log(Level.INFO,"Entering Printer.printArr");
         System.out.println(Arrays.toString(arr));
     }
 
     public static int sorterSelector(){
+        logger.log(Level.INFO,"Entering Printer.sortSelector");
         Scanner scanner = new Scanner(System.in);
         int sorter = -1;
         boolean invalid = true;
@@ -32,6 +54,7 @@ public class Printer {
     }
 
     public static int lengthSelector(){
+        logger.log(Level.INFO,"Entering Printer.lengthSelector");
         Scanner scanner = new Scanner(System.in);
         int arrLength = -1;
         boolean invalid = true;
@@ -52,6 +75,7 @@ public class Printer {
     }
 
     public static int[] generateArray(int arrLength){
+        logger.log(Level.INFO,"Entering Printer.generateArray");
         Random random = new Random();
         int[] arr = new int[arrLength];
         for (int i = 0; i < arrLength; i++) {
@@ -61,6 +85,7 @@ public class Printer {
     }
 
     public static void printAlgorithm(int sorter){
+        logger.log(Level.INFO,"Entering Printer.printAlgorithm");
         boolean invalid = true;
         while (invalid){
             invalid = false;
