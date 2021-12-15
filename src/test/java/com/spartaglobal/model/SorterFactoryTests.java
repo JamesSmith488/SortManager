@@ -1,5 +1,6 @@
 package com.spartaglobal.model;
 
+import com.spartaglobal.controller.SorterFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

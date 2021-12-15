@@ -1,10 +1,13 @@
 package com.spartaglobal.model;
 
+import com.spartaglobal.controller.Printer;
+import java.util.logging.Level;
 import com.spartaglobal.model.BinaryTree.BinaryTree;
 
 public class BinaryTreeSort implements Sortable{
 
     public int[] sort(int[] arr) {
+        Printer.getLogger().log(Level.INFO,"Entering BinaryTreeSort.sort");
         if (arr.length == 0){
             return arr;
         }

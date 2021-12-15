@@ -1,11 +1,12 @@
 package com.spartaglobal.view;
 
 import com.spartaglobal.controller.Printer;
-import com.spartaglobal.model.SorterFactory;
+import com.spartaglobal.controller.SorterFactory;
 
 public class Initialiser {
 
     public static void start(){
+        Printer.loggerInit();
         int sorter = Printer.sorterSelector();
         int arrLength = Printer.lengthSelector();
         int[] arr = Printer.generateArray(arrLength);
