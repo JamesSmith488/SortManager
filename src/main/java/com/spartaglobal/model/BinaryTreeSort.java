@@ -8,9 +8,11 @@ public class BinaryTreeSort implements Sortable{
 
     public int[] sort(int[] arr) {
         Printer.getLogger().log(Level.INFO,"Entering BinaryTreeSort.sort");
+        //If arr is empty, it just returns the empty array as there is nothing to sort so it doesn't need to make the binary tree
         if (arr.length == 0){
             return arr;
         }
+        //Makes the binary tree
         BinaryTree binaryTree = new BinaryTree();
         binaryTree.addElements(arr);
         //Initialises an array with length equal to the number of elements in the binary tree
