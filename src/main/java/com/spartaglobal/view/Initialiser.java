@@ -6,9 +6,13 @@ import com.spartaglobal.controller.SorterFactory;
 public class Initialiser {
 
     public static void start(){
+        //Initialises the logger
         Printer.loggerInit();
+        //Prompts the user to select which sorter they want to use
         int sorter = Printer.sorterSelector();
+        //Prompts the user to select the length of the array to be sorted
         int arrLength = Printer.lengthSelector();
+        //Generates the array randomly
         int[] arr = Printer.generateArray(arrLength);
         //The unsorted randomly generated array
         Printer.printArr(arr);
