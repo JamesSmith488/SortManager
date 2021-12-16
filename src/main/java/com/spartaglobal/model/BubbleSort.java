@@ -1,12 +1,12 @@
 package com.spartaglobal.model;
 
-import com.spartaglobal.controller.Printer;
+import com.spartaglobal.controller.Logging;
 import java.util.logging.Level;
 
 public class BubbleSort implements Sortable{
 
     public int[] sort(int[] arr) {
-        Printer.getLogger().log(Level.INFO,"Entering BubbleSort.sort");
+        Logging.logs(Level.INFO,"Entering BubbleSort.sort");
         //Makes a copy of the inputted array to use for sorting
         int[] sortedArr = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
