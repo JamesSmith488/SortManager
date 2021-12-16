@@ -24,9 +24,10 @@ public class Printer {
             System.out.println("(1) Bubble Sort");
             System.out.println("(2) Merge Sort");
             System.out.println("(3) Binary Tree Sort");
+            System.out.println("(4) Quick Sort");
 
             sorter = scanner.nextInt();
-            if (sorter < 1 || sorter > 3){
+            if (sorter < 1 || sorter > 4){
                 System.out.println("Invalid input");
             }else {
                 invalid = false;
@@ -79,6 +80,8 @@ public class Printer {
                 System.out.println("Merge Sort");
             }else if (sorter == 3){
                 System.out.println("Binary Tree Sort");
+            }else if (sorter == 4){
+                System.out.println("Quick Sort");
             }else {
                 System.out.println("Invalid input");
                 sorter = sorterSelector();

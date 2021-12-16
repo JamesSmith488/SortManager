@@ -1,26 +1,26 @@
 package com.spartaglobal.controller;
 
-import com.spartaglobal.model.BinaryTreeSort;
-import com.spartaglobal.model.BubbleSort;
-import com.spartaglobal.model.MergeSort;
-import com.spartaglobal.model.Sortable;
-import org.jetbrains.annotations.NotNull;
+import com.spartaglobal.model.*;
 
 import java.util.logging.Level;
 
 public class SorterFactory {
 
-    @NotNull
     public static Sortable getSorter(int sorter){
         Logging.logs(Level.INFO,"Entering SorterFactory.getSorter");
+        Sortable sort;
         if (sorter == 1){
-            return new BubbleSort();
+            sort = new BubbleSort();
         } else if (sorter == 2){
-            return new MergeSort();
+            sort = new MergeSort();
         } else if (sorter == 3){
-            return new BinaryTreeSort();
+            sort = new BinaryTreeSort();
+        } else if (sorter == 4){
+            sort = new QuickSort();
+        } else {
+            sort = null;
         }
-        return new BubbleSort();
+        return sort;
     }
 
 }
