@@ -4,13 +4,15 @@ import com.spartaglobal.model.BinaryTreeSort;
 import com.spartaglobal.model.BubbleSort;
 import com.spartaglobal.model.MergeSort;
 import com.spartaglobal.model.Sortable;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.logging.Level;
 
 public class SorterFactory {
 
+    @NotNull
     public static Sortable getSorter(int sorter){
-        Printer.getLogger().log(Level.INFO,"Entering SorterFactory.getSorter");
+        Logging.logs(Level.INFO,"Entering SorterFactory.getSorter");
         if (sorter == 1){
             return new BubbleSort();
         } else if (sorter == 2){
@@ -18,7 +20,7 @@ public class SorterFactory {
         } else if (sorter == 3){
             return new BinaryTreeSort();
         }
-        return null;
+        return new BubbleSort();
     }
 
 }

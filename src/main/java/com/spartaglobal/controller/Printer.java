@@ -3,38 +3,19 @@ package com.spartaglobal.controller;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.logging.*;
-import java.io.IOException;
+import java.util.logging.Level;
 
 public class Printer {
 
-    private final static Logger logger = Logger.getLogger("sortLogger");
     private final static Scanner scanner = new Scanner(System.in);
 
-    public static Logger getLogger(){
-        return logger;
-    }
-
-    public static void loggerInit(){
-        try {
-            //Makes a file handler for the logs to be stored in
-            Handler fileHandler = new FileHandler("src/main/java/com/spartaglobal/view/sortLogger.log");
-            logger.addHandler(fileHandler);
-            //Removes the use of the console handler
-            logger.setUseParentHandlers(false);
-            fileHandler.setFormatter(new SimpleFormatter());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     public static void printArr(int[] arr){
-        logger.log(Level.INFO,"Entering Printer.printArr");
+        Logging.logs(Level.INFO,"Entering Printer.printArr");
         System.out.println(Arrays.toString(arr));
     }
 
     public static int sorterSelector(){
-        logger.log(Level.INFO,"Entering Printer.sortSelector");
+        Logging.logs(Level.INFO,"Entering Printer.sortSelector");
         int sorter = -1;
         boolean invalid = true;
         //Asks the user to select a sorter to use from the list provided and repeats until a valid input is received
@@ -55,7 +36,7 @@ public class Printer {
     }
 
     public static int lengthSelector(){
-        logger.log(Level.INFO,"Entering Printer.lengthSelector");
+        Logging.logs(Level.INFO,"Entering Printer.lengthSelector");
         int arrLength = -1;
         boolean invalid = true;
         //Asks the user to select the length of the array to be sorted and repeats if the input is less than 0 or greater than 1000
@@ -76,7 +57,7 @@ public class Printer {
     }
 
     public static int[] generateArray(int arrLength){
-        logger.log(Level.INFO,"Entering Printer.generateArray");
+        Logging.logs(Level.INFO,"Entering Printer.generateArray");
         Random random = new Random();
         int[] arr = new int[arrLength];
         //Loops over the array generating a random number from 0 to 1000
@@ -87,9 +68,9 @@ public class Printer {
     }
 
     public static void printAlgorithm(int sorter){
-        logger.log(Level.INFO,"Entering Printer.printAlgorithm");
+        Logging.logs(Level.INFO,"Entering Printer.printAlgorithm");
         boolean invalid = true;
-        //Prints out the sorter being used and if the sorter value doesn't relate to a sorter it calles sorterSelector to get a valid value and repeats
+        //Prints out the sorter being used and if the sorter value doesn't relate to a sorter it calls sorterSelector to get a valid value and repeats
         while (invalid){
             invalid = false;
             if (sorter == 1){

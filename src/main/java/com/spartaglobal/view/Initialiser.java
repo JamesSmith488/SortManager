@@ -1,5 +1,6 @@
 package com.spartaglobal.view;
 
+import com.spartaglobal.controller.Logging;
 import com.spartaglobal.controller.Printer;
 import com.spartaglobal.controller.SorterFactory;
 
@@ -7,7 +8,7 @@ public class Initialiser {
 
     public static void start(){
         //Initialises the logger
-        Printer.loggerInit();
+        Logging.loggerInit();
         //Prompts the user to select which sorter they want to use
         int sorter = Printer.sorterSelector();
         //Prompts the user to select the length of the array to be sorted
